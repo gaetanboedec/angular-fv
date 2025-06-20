@@ -1,16 +1,25 @@
 # AngularFv
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+## Tools needed to run locally
 
-## Development server
+- **Node.js**: Make sure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
+- **Angular CLI**: Install the Angular CLI globally by running `npm install -g @angular/cli`.
+- **pnpm**: This project uses pnpm for package management. Install it by running `npm install -g pnpm`.
 
-To start a local development server, run:
+## How to run the project
 
-```bash
-ng serve
-```
+1.  **Install dependencies**:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    ```bash
+    pnpm install
+    ```
+
+2.  **Start the development server**:
+    ```bash
+    pnpm start
+    ```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
