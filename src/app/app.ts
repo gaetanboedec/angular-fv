@@ -5,7 +5,13 @@ import {
   DrawerHeaderComponent,
 } from '../components/drawer/drawer';
 import { ButtonComponent } from '../components/button/button';
-import { ListTodo, ListTodoIcon, LucideAngularModule } from 'lucide-angular';
+import {
+  ListTodo,
+  ListTodoIcon,
+  LucideAngularModule,
+  SignatureIcon,
+  WorkflowIcon,
+} from 'lucide-angular';
 import {
   Accordion,
   AccordionDetails,
@@ -29,6 +35,8 @@ import {
 export class App {
   protected title = 'angular-fv';
   readonly TaskIcon = ListTodoIcon;
+  readonly BusinessFunctionIcon = WorkflowIcon;
+  readonly ContractsIcon = SignatureIcon;
 
   drawerOpen = signal(false);
 
