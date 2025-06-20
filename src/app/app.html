@@ -4,8 +4,28 @@
       Open Drawer
     </button-component>
     <app-drawer [(open)]="drawerOpen">
-      <h2 class="text-xl font-bold mb-4">Reusable Drawer</h2>
-      <p>This is a reusable drawer component using Angular and Tailwind CSS.</p>
+      <drawer-header headerTitle="Amazon.com, Inc" (closeDrawerFromHeader)="closeDrawer()"></drawer-header>
+
+      <div class="space-y-5">
+        <accordion>
+          <accordion-summary title='Tasks' [icon]="TaskIcon"></accordion-summary>
+          <accordion-details>
+            Hello world !
+          </accordion-details>
+        </accordion>
+        <accordion>
+          <accordion-summary title='Tasks 2' [icon]="TaskIcon"></accordion-summary>
+          <accordion-details>
+            Hello world 2 !
+          </accordion-details>
+        </accordion>
+        <accordion>
+          <accordion-summary title='Tasks 3' [icon]="TaskIcon"></accordion-summary>
+          <accordion-details>
+            Hello world 3 !
+          </accordion-details>
+        </accordion>
+      </div>
     </app-drawer>
   </div>
 

@@ -1,0 +1,10 @@
+<ng-container *ngIf="open()">
+    <div class="fixed inset-0 z-40">
+        <div class="bg-opacity-50 fixed inset-0 bg-black/50 transition-opacity" (click)="closeDrawer()"></div>
+        <div
+            class="fixed inset-y-0 right-0 min-w-2xl transform bg-white shadow-xl transition-transform duration-300 ease-in-out">
+            <ng-content select="drawer-header"></ng-content>
+            <div class="py-10"><ng-content></ng-content></div>
+        </div>
+    </div>
+</ng-container>

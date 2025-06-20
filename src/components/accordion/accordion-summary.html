@@ -1,0 +1,9 @@
+<div class="flex px-5 py-3 items-center justify-between bg-slate-200" (click)="toggle()">
+    <div class="flex items-center gap-2">
+        <lucide-icon [img]="icon()" />
+        <span>{{ title() }}</span>
+    </div>
+    <div>
+        <lucide-icon [img]="ChevronIcon" class="flex" [ngClass]="open() ? 'rotate-0' : '-rotate-90'" />
+    </div>
+</div>
