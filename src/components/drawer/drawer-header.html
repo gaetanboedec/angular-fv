@@ -3,6 +3,8 @@
         <h6 class="text-2xl font-semibold">{{ headerTitle() }}</h6>
     </div>
     <div>
-        <button-component (onClick)="onClose()">close</button-component>
+        <button-component (onClick)="onClose()">
+            <lucide-icon [img]="CloseIcon" />
+        </button-component>
     </div>
 </div>

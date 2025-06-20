@@ -8,19 +8,43 @@
 
       <div class="space-y-5">
         <accordion class="block">
-          <accordion-summary title='Tasks' [icon]="TaskIcon"></accordion-summary>
+          <accordion-summary title='Tasks' [icon]="TaskIcon">
+            <ng-template #info>
+              <span
+                class="w-5 h-5 text-xs flex items-center justify-center leading-5 font-semibold bg-slate-200 text-black rounded-full">0</span>
+            </ng-template>
+          </accordion-summary>
           <accordion-details>
             No content
           </accordion-details>
         </accordion>
         <accordion class="block">
-          <accordion-summary title='Business Functions' [icon]="BusinessFunctionIcon"></accordion-summary>
+          <accordion-summary title='Business Functions' [icon]="BusinessFunctionIcon">
+            <ng-template #info>
+              <span
+                class="w-5 h-5 text-xs flex items-center justify-center leading-5 font-semibold bg-slate-200 text-black rounded-full">0</span>
+            </ng-template>
+          </accordion-summary>
           <accordion-details>
-            No content
+            <table-component [headers]="['Name', '']" [rows]="businessFunctionsRows">
+              <ng-template #body *ngFor="let row of businessFunctionsRows">
+                <tr>
+                  <td>{{ row.name }}</td>
+                  <td class="text-right">
+                    <button-component>Preview</button-component>
+                  </td>
+                </tr>
+              </ng-template>
+            </table-component>
           </accordion-details>
         </accordion>
         <accordion class="block">
-          <accordion-summary title='Contracts' [icon]="ContractsIcon"></accordion-summary>
+          <accordion-summary title='Contracts' [icon]="ContractsIcon">
+            <ng-template #info>
+              <span
+                class="w-5 h-5 text-xs flex items-center justify-center leading-5 font-semibold bg-slate-200 text-black rounded-full">0</span>
+            </ng-template>
+          </accordion-summary>
           <accordion-details>
             No content
           </accordion-details>

@@ -3,3 +3,8 @@
 @theme {
   --color-primary: hsl(23, 99%, 72%);
 }
+
+td,
+th {
+  @apply border border-gray-300 p-2;
+}
